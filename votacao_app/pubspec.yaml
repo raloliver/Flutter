@@ -14,7 +14,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -30,7 +30,6 @@ dev_dependencies:
     sdk: flutter
   charts_flutter: 
   image_picker:
-  transparent_image: ^1.0.0
   firebase_database: ^1.0.5
   cached_network_image:
   firebase_storage:
@@ -38,14 +37,17 @@ dev_dependencies:
   random_string:
   sweetalert: any
   animated_card: ^1.0.0+5
-
+  flare_flutter: ^1.5.0
+  bloc_pattern: ^2.1.9+3
+  rxdart: ^0.22.0
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
   assets:
-  - lib/assets/
+  - assets/remove.flr
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

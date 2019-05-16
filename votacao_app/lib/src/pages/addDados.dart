@@ -7,8 +7,8 @@ import 'dart:async';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:random_string/random_string.dart';
-
-import 'package:votacao_app/src/pages/enquete.dart';
+import 'package:sweetalert/sweetalert.dart';
+import 'package:votacao_app/src/pages/tela_principal.dart';
 
 class AddDados extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
   
   StorageReference referenceImage1 = FirebaseStorage.instance.ref();
   StorageReference referenceImage2 = FirebaseStorage.instance.ref();
-  final DatabaseReference databaseReferenceUsuario = FirebaseDatabase.instance.reference().child("Candidatos");
+  final DatabaseReference databaseReferenceUsuario = FirebaseDatabase.instance.reference();
   
 
 
@@ -102,10 +102,6 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
         this.candidato2.nome = this.inputSegundoNome.text;
 
 
-
-    
-
-
          handleSubmit();
      
         setState(() {
@@ -118,35 +114,16 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
  
   }
  Future handleSubmit() async {
-    String id1 = randomAlphaNumeric(30);
-    String id2 = randomAlphaNumeric(30);
+
     try{
       
-      this.candidato1.idDuelo = id1;
-      this.candidato2.idDuelo = id2;
+      DatabaseReference userAdd1 = databaseReferenceUsuario.child("Candidatos").push();
+      DatabaseReference userAdd2 = databaseReferenceUsuario.child("Candidatos");
+      
 
-      DatabaseReference userAdd = databaseReferenceUsuario.push();
-     
-      userAdd.set(
-        [{
-        'imagem': this.candidato1.imagem,
-        'nome': this.candidato1.nome,
-        'idDuelo': this.candidato1.idDuelo,
-        'votos': this.candidato1.votos,
-        'key' : userAdd.key
-      },
-        {
-        'imagem': this.candidato2.imagem,
-        'nome': this.candidato2.nome,
-        'idDuelo': this.candidato2.idDuelo,
-        'votos': this.candidato2.votos,
-        'key' : userAdd.key
-        
-        }]
-      );
-    
-
-
+      //userAdd1.child("Candiddato").set("{${userAdd1.push().key} ${candidato1.toJson()}}");
+      userAdd1.push().set(candidato1.toJson());
+      userAdd1.push().set(candidato2.toJson());
 
     } catch(e){ 
            
@@ -158,7 +135,7 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
   void initState() {
     // TODO: implement initState
     super.initState();
-    
+
   }
   @override
   Widget build(BuildContext context) {
@@ -234,24 +211,7 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
                     ],
                   ),
                 )
-                /*RaisedButton(
-                  child: Text('Camera'),
-                  onPressed: () {
-                    getImage(true);
-                  },
-                ),*/
-
-                /*RaisedButton(
-                  child: Text('Galeria'),
-                  onPressed: () {
-                    getImage(false);
-                  },
-                ),*/
-
-                //_imageFile == null ? Container() : Image.file(_imageFile, height: 300.0, width: 300.0,),
-
-
-        
+            
               ],
               
           ),
@@ -267,7 +227,7 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
         backgroundColor: Colors.green,
         onPressed: (){
           
-          if(inputPrimeiroNome.text == "" && inputSegundoNome.text == ""){
+          if(inputPrimeiroNome.text == "" || inputSegundoNome.text == "" || _imageFile1 == null || _imageFile2 == null ){
            _showDialog(context);
           }else{
           upLoadImage();
@@ -293,34 +253,16 @@ class _AddDadosState extends State<AddDados> with SingleTickerProviderStateMixin
 }
 
 void _showDialog(BuildContext context){
-  showDialog(
-    context: context,
-    builder: (BuildContext context){
-      return AlertDialog(
-        title: new Icon(Icons.error, color: Colors.red, size: 50.0,),
-        content: new Text("Preencha todos os campos"),
-        actions: <Widget>[
-          new FlatButton(
-            child:  Center(
-              child: Text("Confirmar")
-            ),
-            onPressed: (){
-              Navigator.of(context).pop();
-            
-            },
-          )
-        ],
-      );
-    
-    }
-  );
+   SweetAlert.show(context,
+      title: "Erro ao salvar",
+      subtitle: "Preencha todos os campos",
+      style: SweetAlertStyle.error);
 }
 
 class Candidato {
   String imagem;
   String nome;
   String key;
-  String idDuelo;
   int votos = 0;
 
   Candidato();

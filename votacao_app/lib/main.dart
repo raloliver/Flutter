@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:votacao_app/src/pages/addDados.dart';
-import 'package:votacao_app/src/pages/enquete.dart';
-import 'package:votacao_app/src/pages/home.dart';
+import 'package:votacao_app/src/pages/tela_principal.dart';
 
 void main() => runApp(MyApp());
 
