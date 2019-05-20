@@ -1,6 +1,5 @@
 
-> Esse projeto faz parte do meu aprendizado em android para calcular a diferença entre os dois combustivel e mostrar para o 
-usuário qual está mais barato.
+> Projeto clone Telegram web com Flutter Web.
 
 
 ![alt text][tela-inicial]
