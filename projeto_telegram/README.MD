@@ -3,8 +3,7 @@
 
 
 ![alt text][tela-inicial]
-![alt text][tela-empate]
 
 
-[tela-inicial]:https://media.giphy.com/media/XzYl6R01S5tWQRrCPE/giphy.gif "Tela entrada de valores"
+[tela-inicial]:https://media.giphy.com/media/XzYl6R01S5tWQRrCPE/giphy.gif "Tela animada com demonstração"
 
