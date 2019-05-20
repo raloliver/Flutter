@@ -6,5 +6,5 @@
 ![alt text][tela-empate]
 
 
-[tela-inicial]:https://i.imgur.com/3fO44bE.png "Tela entrada de valores"
-[tela-empate]:https://i.imgur.com/jMAnQ4U.png "Tela do menor preço"
+[tela-inicial]:https://media.giphy.com/media/XzYl6R01S5tWQRrCPE/giphy.gif "Tela entrada de valores"
+
