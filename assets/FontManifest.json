@@ -1,0 +1,28 @@
+[
+    {
+        "family": "MaterialIcons",
+        "fonts": [
+            {
+                "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            }
+        ]
+    },
+
+    {
+        "family": "GoogleSansRegular",
+        "fonts": [
+          {
+            "asset": "GoogleSansRegular.ttf"
+          }
+        ]
+      },
+      {
+        "family": "EmojiOne",
+        "fonts": [
+            {
+                "asset": "https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0023-20e3.png"
+            }
+        ]
+    }
+      
+]
