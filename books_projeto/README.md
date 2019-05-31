@@ -1,16 +1,11 @@
-# books_projeto
 
-A new Flutter project.
+> Projeto app de catálago de livros com o uso da API do [goggle books](https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiFt_GexMTiAhXiHLkGHb8UDZkQFjAAegQIBRAC&url=https%3A%2F%2Fdevelopers.google.com%2Fbooks%2F&usg=AOvVaw1FTB_Ui-50CauDt54QJekz) <br> Usando como exemplo um tutorial do 
+ [Youtube](https://youtu.be/oWmQ8fMLmaE) não concluido e posteriormente finalizado por mim.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+![alt text][tela-inicial]
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[tela-inicial]:https://media.giphy.com/media/YTEyrbGVwJpLiVTGFZ/giphy.gif "Tela animada com demonstração"
+
