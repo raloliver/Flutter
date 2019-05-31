@@ -16,5 +16,5 @@
 ![alt text][tela-inicial]
 
 
-[tela-inicial]:https://media.giphy.com/media/YTEyrbGVwJpLiVTGFZ/giphy.gif "Tela animada com demonstração"
+[tela-inicial]:https://media.giphy.com/media/l09K0A2qOqYR2osC1w/giphy.gif "Tela animada com demonstração"
 
