@@ -54,6 +54,8 @@ class _BookWidgetState extends State<BookWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Text("${widget.title}", 
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

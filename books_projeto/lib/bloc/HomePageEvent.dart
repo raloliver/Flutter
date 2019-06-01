@@ -12,6 +12,9 @@ class HomePageEventSearch extends HomePageEvents{
     @required this.query
   });
 
-  @override
-  String toString() => "HomePageEventSearch";
+
+
+ @override
+  // TODO: implement props
+  List get props => [HomePageEventSearch];
 }
